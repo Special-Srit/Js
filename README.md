@@ -1,2 +1,2 @@
 # Js
-idk
+Archive of Js Learning
