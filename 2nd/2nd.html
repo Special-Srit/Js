@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js refactoring</title>
+    <link rel="stylesheet" href="css/2.css">
+</head>
+
+<body>
+    <h1>Attendence <div id="clock"></div>
+    </h1>
+    <table>
+        <colgroup>
+            <col style="width: 100px;">
+        </colgroup>
+        <tr>
+            <td>No</td>
+            <td>name</td>
+        </tr>
+        <script>
+            let idk = prompt("What's your name bro");
+            for (let temp = 1; temp <= 3; temp++) {
+                document.write(`
+                <tr>
+                    <td>${temp}</td>
+                    <td id ='help${temp}'></td>
+                    </tr>
+                `);
+            }
+            document.getElementById("help3").innerHTML = idk;
+        </script>
+    </table>
+    <script src="js/1.js"></script>
+</body>
+
+</html>
