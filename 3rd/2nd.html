@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scope</title>
+</head>
+
+<body>
+
+    <script>
+        let smth = 1; // Declare variable and inputs 1
+
+        function outer_bro() { // Create function(bro that's it)
+
+            let idk_lol = 2; // Declare variable and inputs 2
+            // Variable idk_lol offset = local variable
+
+            function inner_bro() { // Create function(bro that's it)
+
+                let bro_how_many = 3; // Declare variable and inputs 3
+                // Variable idk_lol offset = Variable idk_lol offset
+                console.log("inner smth:", smth);
+                console.log("inner idk_lol:", idk_lol);
+                console.log("inner bro_how_many:", bro_how_many);
+            }
+            inner_bro();
+
+            console.log("outer smth:", smth);
+            console.log("outer idk_lol:", idk_lol);
+            //console.log("outer bro_how_many:", bro_how_many);
+        }
+        outer_bro();
+        console.log("Global smth:", smth);
+        //console.log("outer idk_lol:", idk_lol);
+        //console.log("outer bro_how_many:", bro_how_many);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smth?</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        let idk = 1; //number value declared
+        let smth = 2;
+
+        console.log("Addition : ", idk + smth);
+        console.log("Subtraction : ", idk - smth);
+        console.log("multuply : ", idk * smth);
+        console.log("division : ", idk / smth);
+        console.log("idk++ : ", idk++);
+        console.log("idk-- : ", idk--);
+
+        let numLol = Number('123'); //123 string parameter
+        console.log("Number('123')Callback : ", numLol);// string parameter -> number output
+        let numLol1 = Number(123); //123 number parameter
+        console.log("Number('123')Callback : ", numLol1);// number parameter -> number output
+        let numLol2 = Number('123ABC'); //123ABC string parameter
+        console.log("Number('123ABC')Callback : ", numLol2);// string parameter(number + string) -> NaN(Error = Not number)
+        let numLol3 = parseInt('123'); //123 string parameter
+        console.log("parseInt('123')Callback : ", numLol3);// string parameter -> number output
+        let numLol4 = parseInt('12.3'); //12.3 string parameter
+        console.log("parseInt('12.3')Callback : ", numLol4);// string parameter(Decimal number) -> number output(without number beyond decimal point)
+        let numLol5 = parseInt('123ABC'); //123ABC string parameter
+        console.log("parseInt('123ABC')Callback : ", numLol5);// string parameter(Mixed) -> Only number output(Ignored all string parts)
+        let numLol6 = parseFloat('123'); //123 string parameter
+        console.log("parseFloat('123')Callback : ", numLol6);// string parameter -> number output
+        let numLol7 = parseFloat('12.3'); //12.3 string parameter
+        console.log("parseFloat('12.3')Callback : ", numLol7);// string parameter -> number output(with all Decimal number)
+        let numLol8 = parseFloat('123ABC'); //123ABC string parameter
+        console.log("parseFloat('123ABC')Callback : ", numLol8);// string parameter(Mixed) -> Only number output(Ignored all string parts)
+        let numLol9 = String('123'); //123 string parameter
+        console.log("String('123')Callback : ", numLol9);// string parameter -> string output(There is a difference in the log)
+        let numLol10 = String('True'); //True string parameter
+        console.log("String('True')Callback : ", numLol10);// string parameter -> string output(Perfectly printed all strings)
+        let numLol11 = Boolean(1); //1 number parameter
+        console.log("Boolean(1)Callback : ", numLol11);// string parameter -> string output(outputed in true which 1 means in binary number)
+        let numLol12 = Boolean(0); //0 number parameter
+        console.log("Boolean(0)Callback : ", numLol12);// string parameter -> string output(outputed in false which 0 means in binary number)
+        let numLol13 = Boolean('ABC'); // string parameter
+        console.log("Boolean('ABC')Callback : ", numLol13);// string parameter -> string output(outputed as true, which assumed as if the long as the value is not 0, it will be true)
+        let numLol14 = Boolean(''); //? parameter
+        console.log("Boolean('')Callback : ", numLol14);// string parameter -> string output(outputed in false which makes sense as it is undefined, which means it cant be true)
+
+
+    </script>
+</body>
+
+</html>
