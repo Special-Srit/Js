@@ -16,12 +16,15 @@
         let idk = 1; //number value declared
         let smth = 2;
 
+
         console.log("Addition : ", idk + smth);
         console.log("Subtraction : ", idk - smth);
         console.log("multuply : ", idk * smth);
         console.log("division : ", idk / smth);
-        console.log("idk++ : ", idk++);
-        console.log("idk-- : ", idk--);
+        console.log("idk++ : ", idk++);// adds later
+        console.log("idk-- : ", idk--);// subtracts later
+        console.log("++idk : ", ++idk);// adds first
+        console.log("--idk : ", --idk);// subtracts first
 
         let numLol = Number('123'); //123 string parameter
         console.log("Number('123')Callback : ", numLol);// string parameter -> number output
@@ -54,6 +57,59 @@
         let numLol14 = Boolean(''); //? parameter
         console.log("Boolean('')Callback : ", numLol14);// string parameter -> string output(outputed in false which makes sense as it is undefined, which means it cant be true)
 
+        console.log("Test 1");
+        let smth_1 = 0;
+        while (++smth_1 < 5) {
+            console.log("++smth_1:", smth_1);
+        }
+
+        console.log("Test 2");
+        let smth_2 = 0;
+        while (smth_2++ < 5) {
+            console.log("smth_2++:", smth_2);
+        }
+
+        // Assignment operators
+        let hehe = 5; // add 5 to variavble hehe
+
+        hehe += 3;
+        console.log("hehe value:", hehe);
+
+        let hehe1 = 5; // add 5 to variavble hehe
+        hehe -= 3;
+        console.log("hehe1 value:", hehe);
+
+        //comparison operator
+        let num1 = 3;
+        let str = "5";
+        console.log("num1 == str: ", num1 == str); // true
+        console.log("num1 == str: ", num1 === str); // False
+        console.log("num1 != str: ", num1 != str); // False
+        console.log("num1 !== str: ", num1 == str); // true
+
+        console.log("num1 < 3: ", num1 < 3); // False
+        console.log("num1 > 3: ", num1 > 3); // False
+        console.log("num1 <= 3: ", num1 <= 3); // true
+        console.log("num1 >= 3: ", num1 >= 3); // true
+
+        //Logical operator
+        let sm1 = true;
+        let sm2 = false;
+
+        console.log("sm1 && sm2 : ", sm1 && sm2); // false[AND gate]
+        console.log("sm1 || sm2 : ", sm1 || sm2); // true[OR gate]
+        console.log("!sm1 : ", !sm1); // false[NOT gate]
+
+        //conditional operator
+        let x = 10;
+        let y = 20;
+
+        let max = (x > y) ? x : y; // if true? -> execute: if false? -> execute
+
+        //quiz 3
+        let age_bro = 18;
+        let max_age = (age_bro >= 18) ? "mature" : "Not mature";
+        console.log("Is mature? : ", max_age);
 
     </script>
 </body>

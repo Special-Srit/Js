@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1 id="answer"></h1>
+
+
+
+
+    <script>
+        let numb = prompt(`
+                num input plz
+            `);
+
+        function add(hehe) {
+            let num1 = hehe;
+            let temp1 = 0;
+            for (let temp = 1; temp <= num1; temp++) {
+                temp1 += temp;
+                console.log("Added ", temp);
+                console.log("current value is ", temp1)
+            }
+            return temp1;
+        }
+        let smth = add(numb);
+        document.getElementById("answer").innerHTML = 'When added all up, its ' + smth;
+    </script>
+</body>
+
+</html>
