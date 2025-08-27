@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time table again.. what?</title>
+</head>
+<style>
+    /* float */
+    .wrap {
+        width: 100%;
+        float: left;
+        border: 1px solid;
+    }
+
+    .wrap::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .layout {
+        float: left;
+        width: 150px;
+        border: 1px dotted lightpink;
+    }
+
+    /* flex */
+    .fl_wrap {
+        display: flex;
+        clear: both;
+        border: 1px soild lightblue;
+        margin-bottom: 20px;
+    }
+
+    .fl_layout {
+        border: 1px dotted lightblue;
+        padding: 5px;
+    }
+
+    /* table */
+    table {
+        border-collapse: collapse;
+        border: 1px solid lightcoral;
+        margin-bottom: 20px;
+    }
+
+    td {
+        border: 1px dotted lightcoral;
+    }
+</style>
+
+<body>
+    <!-- Table pt start -->
+    <!-- <table>
+        <td>hello attempt 1</td>
+        <td>hello attempt 2</td>
+        <td>hello attempt 3</td>
+    </table>-->
+    <!-- Table pt end -->
+
+    <!-- Flex pt start -->
+    <!--<div class="fl_wrap">
+        <div class="fl_layout"></div>
+    </div>-->
+    <!-- Flex pt end -->
+    <!-- div pt start -->
+    <!-- <div>
+        <div class="layout"></div>
+    </div> -->
+    <!-- div pt end -->
+
+    <h2>Table pt</h2>
+    <script>
+        // tables
+        document.write("<table><tr>");
+        for (let time = 2; time <= 9; time++) {
+            document.write("<td>");
+            for (let table = 2; table <= 9; table++) {
+                document.write(`${time} * ${table} = ${time * table}<br>`)
+            }
+            document.write("</td>");
+        }
+        document.write("</tr></table>");
+    </script>
+    <h2>Flex pt</h2>
+    <script>
+        // flex
+        document.write("<div class ='fl_wrap'>");
+        for (let time = 2; time <= 9; time++) {
+            document.write("<div class = 'fl_layout'>");
+            for (let table = 2; table <= 9; table++) {
+                document.write(`${time} * ${table} = ${time * table}<br>`)
+            }
+            document.write("</div>");
+        }
+        document.write("</div>");
+
+    </script>
+    <h2>Floating pt</h2>
+    <script>
+        // float
+        document.write("<div class ='wrap'>");
+        for (let time = 2; time <= 9; time++) {
+            document.write("<div class = 'layout'>");
+            for (let table = 2; table <= 9; table++) {
+                document.write(`${time} * ${table} = ${time * table}<br>`)
+            }
+            document.write("</div>");
+        }
+        document.write("</div>");
+    </script>
+
+
+</body>
+
+</html>
