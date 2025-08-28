@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if practice</title>
+</head>
+
+<body>
+
+
+    <script>
+        ask();
+
+        function ask() {
+            let userInput = prompt('enter number lol');
+            let usernum = parseInt(userInput);
+
+            console.log("Input:", userInput);
+            console.log("Parsed number:", usernum);
+            console.log("Type:", typeof usernum);
+            console.log("Is NaN?", isNaN(usernum));
+
+            if (isNaN(usernum) || userInput.trim() === '') {
+                alert('That is not a number bruh');
+                ask();
+            }
+            else {
+                if (usernum % 3 == 0) { // If the input value is divisible by 3
+                    alert('the input value is divisible by 3');
+                }
+                else {
+                    alert('the input value is NOT divisible by 3');
+                    ask(); // Ask again for another number
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // function show(parameter) { 
+        // Function -> defined function
+        // show() -> call function without parameter
+        // show(parameter) -> call function with parameter
+
+        //return idk; ..variable
+        // return idk+idk uh.. just adds stuffs
+
+        //}
+        // show(Argument);
+        function addition(num1, num2) {
+            return num1 + num2;
+        }
+
+        let idk = addition(1, 2);
+        console.log(`result = ${idk}`);
+
+        function addition1(num1 = 9, num2 = 10) {// set parameter
+            return num1 + num2;
+        }
+        let idk1 = addition1(1, 2);
+        console.log(`result = ${idk1}`);
+
+        let idk2 = addition1(1);
+        console.log(`result = ${idk2}`); // If the input value is not enough, it will used the predefined value to make the function work.
+        // anonymous function
+        let idk3 = function (a, b) {
+            return a + b;
+        }
+        console.log(`result = ${idk3(8, 9)}`);
+
+        //insta executed function
+        (function (a, b) {
+            return a + b;
+        }());
+
+        (function () {
+            let name = prompt("write your name bro");
+            document.write(`sup ${name} <br>`);
+        }(10, 20));
+
+
+        (function (nu1, nu2) {
+            total = nu1 + nu2;
+        }(10, 20));
+        document.write(`The total is ${total}`);
+
+        let ello = function () {
+            return "ello";
+        }
+
+
+
+    </script>
+</body>
+
+</html>
