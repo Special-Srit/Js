@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bro</title>
+</head>
+<style>
+    ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    ul li {
+        padding: 20px;
+        border: 1px solid lightcoral;
+    }
+
+    #result {
+        height: 300px;
+        border: 1px solid lightgreen;
+    }
+</style>
+
+<body>
+
+    <!--
+        <ul>
+          <li><a href="" onclick="alert(`you pressed the button bro alr?`)">green</a></li>
+          <li><a href="" onclick="alert(`you pressed the button bro alr?`)">orange</a></li>
+         <li><a href="" onclick="alert(`you pressed the button bro alr?`)">purple</a></li>
+      </ul>
+    -->
+    <ul>
+        <li><a href="#" onclick="bg('green')">green</a></li>
+        <li><a href="#" onclick="bg('orange')">orange</a></li>
+        <li><a href="#" onclick="bg('purple')">purple</a></li>
+    </ul>
+
+    <div id="result"></div>
+    <script>
+        function bg(color) {
+            let result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+</body>
+
+</html>

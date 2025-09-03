@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+
+    <script>
+        // anonymous function
+        const hello = function () {
+            return "hello";
+        }
+        console.log(hello());
+
+        //arrow function(without. Parameter)
+        const ello = () => { return "sup" };
+        console.log(ello())
+
+        // (while using arrow function, if the function is just a line, you can exclude '()')
+        const ello2 = () => `ello from 1 line of function`;
+        console.log(ello2());
+
+        //When there's only 1 parameter
+        let ello3 = function (lol) {
+            document.write(`if parameter : ${lol} sir, what a  good day isn't it <br>`);
+        }
+        ello3(prompt("Name sir"));
+
+        const idk = (smth) => { document.write(`if parameter : ${smth} sir, what a  good day isn't it`); }
+        idk(prompt("Bro"));
+
+        //Two parameters lol
+        // let smth = function (lol1, lol2) {
+        //    return lol1 + lol2;
+        // }
+        // alert(smth(100, 200));
+
+        let smth1 = (lol1, lol2) => lol1 + lol2;
+        alert(smth(100, 200));
+    </script>
+</body>
+
+</html>
