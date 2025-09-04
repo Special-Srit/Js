@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading challenge</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid #222;
+            background-color: #3bf;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 70px;
+        }
+
+        .accent {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Read books</h1>
+        <p>With Streak of <span class="accent" id="result"></span>You had read books this long!<br> </p>
+        <p>Congrats!</p>
+    </div>
+    <button onclick="window.close">Close</button>
+
+    <script>
+        // Practice Object
+        //BEFORE ASKING ANY QUESTION, READ THE GODDAMN COMMENTS!!!!!
+
+        let present = new Date(); // Adds new variable(Current date)
+        let inital_day = new Date("2024-09-04"); // Adds new variable(Date which the date initally started from)
+        console.log(present); // Date Value
+        console.log(inital_day); // Date Value
+        // Since the Date Variable is Unix based, js turns that in to more precise Milliseconds ->(Adding 3 more digits)
+        //P.s If the date Before January 1, 1970, 00:00:00 UTC, then the value will be negative.
+        //Why Js use ms? -> 1. More precision, 2. Whole Numbers(without decimals), 
+        // If the format doesn't match the necessary format to input, it will return Invaild date.
+        let getTime_Present = present.getTime(); // Gets the date(as the variable is empty, the present time info gets inputed into the value);
+        let getTime_Initial = inital_day.getTime(); // Gets the date(In this time the value has been entered, so being correct format of the input, 
+        // it gets carried over to the 'toDo' value.)
+        console.log(getTime_Present); // Miliseconds Value
+        console.log(getTime_Initial); // Miliseconds Value
+        let Date_passed = getTime_Present - getTime_Initial; // Substracts the value that has been collected(in ms)
+
+        Date_passed = Math.round(Date_passed / (1000 * 60 * 60 * 24));// As the miliseconds are 1/1000, it converts in to seconds, minutes,
+        //  and hours, and multiplies 24 and make that a year, and rounds up the numbers if there is any numbers after the decimals.
+        // 'Math' is an object for this command line(built-in object), But 'Math.round()' is a method
+        document.querySelector('#result').innerText = (`${Date_passed} Days!`);// Search Tags that has '#result' in the HTML>Body section and Inputs the text.
+    </script>
+</body>
+
+</html>
